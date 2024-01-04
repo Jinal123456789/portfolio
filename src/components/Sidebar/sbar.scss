@@ -1,0 +1,118 @@
+.nav-bar {
+  background: #181818;
+  width: 60px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  z-index: 3;
+  min-height: 500px;
+
+  .logo {
+    display: block;
+    padding: 8px 0;
+
+    img {
+      display: block;
+      margin: 8px auto;
+      width: 24px;
+      height: auto;
+
+      &.sub-logo {
+        width: 50px;
+      }
+    }
+  }
+
+  nav {
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    text-align: center;
+
+    a {
+      position: relative;
+      display: block;
+      font-size: 22px;
+      line-height: 51px;
+      text-decoration: none;
+      color: #4d4d4e;
+
+      // i {
+      //     transition: all 0.3s ease-out;
+      //     color:white;
+      // }
+      svg {
+        &:hover {
+          color: red;
+        }
+      }
+
+      &:hover {
+        color: #ffd700;
+        svg {
+          opacity: 0;
+        }
+        &:after {
+          opacity: 1;
+        }
+      }
+
+      &::after {
+        content: "";
+        font-size: 12px;
+        display: block;
+        font-size: 9px;
+        opacity: 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+      }
+
+      &:first-child {
+        &::after {
+          content: "HOME";
+        }
+      }
+    }
+    a.about {
+      &::after {
+        content: "ABOUT";
+      }
+    }
+    a.contact {
+      &::after {
+        content: "CONTACT";
+      }
+    }
+    a.active {
+      svg {
+        color: #ffd700;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    position: absolute;
+    bottom: 30px;
+    text-align: center;
+    display: block;
+    font-size: 22px;
+    width: 100%;
+    padding: 0;
+
+    li{
+        a{
+            padding: 7px 0;
+            display: block;
+            line-height: 20px;
+
+            &:hover svg{ 
+                color: #ffd700;
+            }
+        }
+    }
+
+  }
+}
