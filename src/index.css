@@ -10,6 +10,7 @@ body {
   background: #022043;
   overflow: hidden;
   display: block;
+  /* overflow-Y: auto; */
 }
 
 code {

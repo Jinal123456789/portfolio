@@ -1,0 +1,164 @@
+@import '../../App.scss';
+
+
+.resume-zone {
+  position: absolute;
+  left: 50%;
+  right: 0;
+  top: 0;
+  width: 45%;
+  height: 90%;
+  bottom: 0;
+  overflow: hidden;
+
+  // font-size: 25px;
+}
+.skills-icon {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 80px;
+  // .icon__wrap{
+  //     svg {
+  //         &:hover {
+  //           color: red;
+  //         }
+  //     }
+  // }
+}
+
+.icon__wrap {
+  position: relative;
+  padding: 28px;
+
+  .icon__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    color: $primary-color;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+  }
+}
+.icon__wrap:hover .icon__description {
+  visibility: visible;
+  opacity: 1;
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  background: rgb(15 23 42 / 62%);
+}
+//   .icon__wrap{
+//     :hover{
+//     background: rgb(15 23 42 / 62%);
+//     }
+//   }
+.about-page .text-zone-links {
+  position: absolute;
+  left: 10%;
+  top: 0;
+  width: 35%;
+  vertical-align: middle;
+  display: table-cell;
+  max-height: 90%;
+}
+
+.contact-icons {
+  display: flex;
+  flex-direction: column;
+
+  a.links-button {
+    border: 1px solid $primary-color;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    text-decoration: none;
+    background-color: $primary-color;
+    p{
+    color: #d6d8db;  
+    font-size: 18px;
+    width: 100%;
+    text-align: right;
+    }
+  
+  svg.pro-link {
+    width: 4rem;
+    height: 4rem;
+    }
+  
+}
+}
+
+a.flat-contact {
+  color: $primary-color;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 4px;
+  text-decoration: none;
+  padding: 10px 18px;
+  border: 1px solid $primary-color;
+  margin-top: 25px;
+  float: left;
+  animation: fadeIn 1s 1.8s backwards;
+  white-space: nowrap;
+  margin: 20px;
+  &:hover{
+    background-color: $secondary-color;
+    color: $primary-color;
+    border: 1px solid $primary-color;
+}
+}
+
+//   responsive
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    .about-page .text-zone-links {
+      position: absolute;
+      left: 0%; 
+      top: 0;
+      width: 100%;
+      vertical-align: middle;
+      display: table-cell;
+      max-height: 90%;
+  }
+  .resume-zone{
+    display: none;
+  }
+  a.flat-contact {
+    letter-spacing: 0px;
+  }
+  }
+
+  
+  // @mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    .about-page .text-zone-links {
+      position: absolute;
+      left: 0%; 
+      top: 0;
+      width: 100%;
+      vertical-align: middle;
+      display: table-cell;
+      max-height: 90%;
+  }
+  .resume-zone{
+    display: none;
+  }
+  a.flat-contact {
+    letter-spacing: 0px;
+  }
+  }
+  // }
+  
+  
+  
+
+
+
+

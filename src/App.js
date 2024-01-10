@@ -1,20 +1,23 @@
 // import logo from './logo.svg';
 import "./App.scss";
-import Layout from "./components/Layout";
+// import Layout from "./components/Layout/index.js";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/home";
-import About  from "./components/About/about";
-import Contact from "./components/Contact/contact";
+import Contact  from "./components/About/about";
+import Projects from "./components/Contact/contact";
+import Layout from "./components/layout/index.js";
+import Skills from "./components/Skills/skills.js"
 
 function App() {
   return (
     <div className="App">
-      <h1>lkjoij</h1>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/skills" element={<Skills/>} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="/contact" element={<Contact />} />
+         
         </Route>
       </Routes>
     </div>

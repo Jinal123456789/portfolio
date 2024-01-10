@@ -1,0 +1,131 @@
+@import "../../App.scss";
+
+.flipcard {
+  // perspective: 800;
+  // -moz-perspective: 800;
+  // -webkit-perspective: 800;
+  // margin: 1em auto;
+  margin: auto;
+  width: 20rem;
+  height: 16rem;
+  // border: solid 1em white;
+  // border-radius: 0.5em;
+  // font-family: Georgia;
+  transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  transition: 0.5s;
+  -moz-transition: 0.5s;
+  -webkit-transition: 0.5s;
+  cursor: pointer;
+  font-size: 18px;
+}
+.flipcard:hover {
+  box-shadow: 0 0 1em black;
+}
+.flipcard.flipped {
+  transform: rotatey(-180deg);
+  -moz-transform: rotatey(-180deg);
+  -webkit-transform: rotatey(-180deg);
+}
+.flipcard .face {
+  padding: 1em;
+  text-align: center;
+  backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+.flipcard .front {
+  color: $secondary-color;
+  display: block;
+  font-size: 23px;
+}
+.flipcard.flipped .front {
+  display: none;
+}
+.flipcard .back {
+  color: $secondary-color;
+  transform: rotateY(180deg);
+  -moz-transform: rotateY(180deg);
+  -webkit-transform: rotateY(180deg);
+  display: none;
+}
+.flipcard.flipped .back {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  margin: 10px;
+  float: left;
+  width: 25%;
+  padding: 10px;
+  height: 300px; /* Should be removed. Only for demonstration */
+}
+.column.flipcard {
+  background-color: $primary-color;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+//   responsive
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// @mixin mobile {
+@media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+  .container {
+    overflow-x: auto;
+  }
+  .column {
+    margin: 10%;
+    float: left;
+    width: 80%;
+    padding: 10px;
+    height: 300px;
+  }
+}
+// }
+
+// @mixin tablet {
+@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  .container {
+    overflow-x: auto;
+  }
+  .column {
+    margin: 10px;
+    float: left;
+    width: 40%;
+    padding: 10px;
+    height: 200px;
+    margin-bottom: 80px;
+  }
+  .text-zone .skills-icon .icon__wrap svg.icon__img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .text-zone {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+  }
+}
+// }
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}

@@ -1,3 +1,4 @@
+@import "../../App.scss";
 .nav-bar {
   background: #181818;
   width: 60px;
@@ -14,7 +15,7 @@
     img {
       display: block;
       margin: 8px auto;
-      width: 24px;
+      width: 100%;
       height: auto;
 
       &.sub-logo {
@@ -25,7 +26,8 @@
 
   nav {
     position: absolute;
-    top: 50%;
+    // top: 50%;
+    top: 26%;
     display: block;
     width: 100%;
     text-align: center;
@@ -49,7 +51,7 @@
       }
 
       &:hover {
-        color: #ffd700;
+        color: $primary-color;
         svg {
           opacity: 0;
         }
@@ -76,19 +78,24 @@
         }
       }
     }
-    a.about {
-      &::after {
-        content: "ABOUT";
-      }
-    }
     a.contact {
       &::after {
         content: "CONTACT";
       }
     }
+    a.projects {
+      &::after {
+        content: "PROJECTS";
+      }
+    }
+    a.skills {
+      &::after {
+        content: "SKILLS";
+      }
+    }
     a.active {
       svg {
-        color: #ffd700;
+        color: $primary-color;
       }
     }
   }
@@ -102,17 +109,181 @@
     width: 100%;
     padding: 0;
 
-    li{
-        a{
-            padding: 7px 0;
-            display: block;
-            line-height: 20px;
+    li {
+      a {
+        padding: 7px 0;
+        display: block;
+        line-height: 20px;
 
-            &:hover svg{ 
-                color: #ffd700;
-            }
+        &:hover svg {
+          color: $primary-color;
         }
+      }
     }
+  }
+  .menu-icon {
+    // svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu {
+    //   display: none;
+    // }
+    svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu {
+      display: none;
+    }
+  }
+}
 
+@media (max-width: 768px) {
+  // .nav-elements nav:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+}
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+  .menu-icon {
+    svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu {
+      display: block !important;
+      font-size: 33px;
+      color: $primary-color;
+    }
+  }
+  // .nav-bar .menu-icon .svg{
+  //   display: block;
+  // }
+  .nav-bar .logo {
+    padding: 0;
+    img {
+      display: block;
+      margin: auto;
+      width: 60px;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      /* padding-top: 15px; */
+      // padding-left: 15px;
+    }
+  }
+  .nav-bar {
+    height: 60px;
+    background-color: #181818;
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 15px;
+    padding-right: 15px;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #d6d8db;
+    width: 0px;
+    height: calc(50vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 12px;
+  }
+
+  .nav-elements.active {
+    width: 200px;
+  }
+
+  .nav-elements nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements nav {
+    margin-right: unset;
+    margin-top: 22px;
+    position: absolute;
+    top: 5%;
+  }
+  .container.about-page {
+    margin-top: 4rem;
+  }
+}
+// @mixin tablet {
+@media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+  .menu-icon {
+    svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu {
+      display: block !important;
+      font-size: 33px;
+      color: $primary-color;
+    }
+  }
+  // .nav-bar .menu-icon .svg{
+  //   display: block;
+  // }
+  .nav-bar .logo {
+    padding: 0;
+    img {
+      display: block;
+      margin: auto;
+      width: 60px;
+      height: auto;
+      padding: 0;
+      margin: 0;
+      /* padding-top: 15px; */
+      // padding-left: 15px;
+    }
+  }
+  .nav-bar {
+    height: 60px;
+    background-color: #181818;
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+  }
+  .menu-icon {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-top: 15px;
+    padding-right: 15px;
+  }
+
+  .nav-elements {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #d6d8db;
+    width: 0px;
+    height: calc(50vh - 60px);
+    transition: all 0.3s ease-in;
+    overflow: hidden;
+    margin: 1rem;
+    border-radius: 12px;
+  }
+
+  .nav-elements.active {
+    width: 200px;
+  }
+
+  .nav-elements nav {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-elements nav {
+    margin-right: unset;
+    margin-top: 22px;
+    position: absolute;
+    top: 5%;
+  }
+  .container.about-page {
+    margin-top: 4rem;
   }
 }

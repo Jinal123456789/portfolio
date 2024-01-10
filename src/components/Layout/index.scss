@@ -1,37 +1,136 @@
-.page{
-    width: 100%;
-    height: 100%;
-    position: absolute;
+@import "../../App.scss";
+.page {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
 }
-.top-tags{
-    bottom: auto;
-    top: 35px;
+.top-tags {
+  bottom: auto;
+  top: 35px;
 }
-.tags{
-    color: #ffd700;
-    opacity: 0.6;
-    position: absolute;
-    bottom: 120px;
-    left: 120px;
-    font-size: 18px;
+.tags {
+  color: #ffd700;
+  opacity: 0.6;
+  position: absolute;
+  bottom: 120px;
+  left: 120px;
+  font-size: 18px;
 }
-.bottom-tag-html{
-    margin-left: -20px;
+.bottom-tag-html {
+  margin-left: -20px;
 }
 
 // css for container
 
 .container {
-    width: 100%;
-    height: 90%;
-    min-height: 566px;
-    position: absolute;
-    opacity: 0;
-    top: 5%;
-    margin: 0 auto;
-    z-index: 1;
-    transform-style: preserve-3d;
-    animation: fadeIn 1s forwards;
-    animation-delay: 1s;
-    // will-change: ;
+  width: 100%;
+  // height: 90%;
+  height: 100%;
+  min-height: 566px;
+  position: absolute;
+  opacity: 0;
+  top: 5%;
+  // top: 0;
+  margin: 0 auto;
+  z-index: 1;
+  transform-style: preserve-3d;
+  animation: fadeIn 1s forwards;
+  animation-delay: 1s;
+  // will-change: ;
 }
+
+// about
+.about-page {
+  .text-zone {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    // transform: translateY(-50%);s
+    width: 35%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+      margin-top: 0;
+      position: relative;
+      margin-bottom: 30px;
+      left: 10px;
+      color: #ffd700;
+    }
+    p {
+      font-size: 16px;
+      color: aliceblue;
+    }
+    ul {
+      li {
+        color: aliceblue;
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.experience-page {
+  .project-zone {
+    position: absolute;
+    left: 10%;
+    top: 0;
+    // transform: translateY(-50%);s
+    width: 90%;
+    vertical-align: middle;
+    display: table-cell;
+    max-height: 90%;
+    padding: 30px;
+    margin: auto;
+
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+      margin-top: 0;
+      position: relative;
+      margin-bottom: 30px;
+      left: 10px;
+      color: $primary-color;
+    }
+  }
+}
+
+.hamburger {
+  display: none;
+}
+
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+  .hamburger {
+    display: block or inline-block;
+  }
+  .left {
+    display: none;
+  }
+  .container {
+    position: absolute;
+    top: 0;
+    // padding-top: 25px;
+    margin-top: 4rem;
+  }
+  .experience-page .project-zone {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+  }
+}
+// @mixin tablet {
+    @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+        
+    }

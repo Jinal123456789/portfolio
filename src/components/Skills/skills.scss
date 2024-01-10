@@ -1,0 +1,103 @@
+@import '../../App.scss';
+.container{
+  overflow-x: auto;
+}
+.skill-page {
+  // background-color: red;
+  color: $primary-color;
+}
+
+.text-zone {
+  position: absolute;
+  left: 10%;
+  right: 0;
+  top: 0;
+  h1 {
+    color: $primary-color;
+    font-size: 43px;
+  }
+  .skills-icon {
+    display: flex;
+    flex-wrap: wrap;
+    // margin: auto;
+    .icon__wrap {
+      position: relative;
+      padding: 10px;
+      svg.icon__img {
+        width: 14rem;
+        height: 12rem;
+        padding: 12px;
+      }
+    }
+  }
+}
+.icon__wrap {
+  .icon__description {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: $primary-color;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    font-size: 22px;
+    p {
+      position: relative;
+      top: 50%;
+      left: 50%;
+      width: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: red;
+    }
+  }
+}
+
+
+//   responsive
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+// @mixin mobile {
+  @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
+    .text-zone {
+        h1{
+            text-align: center;
+        }
+        .skills-icon{
+            .icon__wrap{
+                margin: auto;
+            }
+        }
+    }
+
+    .text-zone .skills-icon .icon__wrap svg.icon__img {
+      width: 8rem;
+      height: 8rem;
+  }
+  .text-zone {
+    position: absolute;
+    left: 0; 
+    right: 0;
+    top: 0;
+    margin: auto;
+  }
+  // .column{
+  //   height: 200px;
+  //   margin-bottom: 80px;
+  // }
+}
+// }
+
+// @mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {}
+
+
+  // @media (min-width: #{$desktop-width}) {
+  //   @content;
+  // }
+
+
