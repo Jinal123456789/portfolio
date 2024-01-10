@@ -1,5 +1,5 @@
 import "./home.scss";
-import "../layout/index.scss";
+import "../Layout/index.scss";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faReact } from '@fortawesome/free-solid-svg-icons'

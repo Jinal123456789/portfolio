@@ -5,7 +5,7 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home/home";
 import Contact  from "./components/About/about";
 import Projects from "./components/Contact/contact";
-import Layout from "./components/layout/index.js";
+import Layout from "./components/Layout/index.js";
 import Skills from "./components/Skills/skills.js"
 
 function App() {
