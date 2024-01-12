@@ -7,6 +7,7 @@ import {
   faGithub,
   faStackOverflow,
 } from "@fortawesome/free-brands-svg-icons";
+import MyPdfViewer from "./pdf.js"
 
 
 const About = () => {
@@ -43,19 +44,20 @@ const About = () => {
         </div>
         </div>
         <div className="resume-zone">
-          <object
-            data="http://africau.edu/images/default/sample.pdf"
+          {/* <object
+            data="https://drive.google.com/file/d/1W9XID4kdFJMn4QUoLWnyjSFifGiPU6Bz/view?usp=drive_link"
             type="application/pdf"
             width="100%"
             height="100%"
           >
             <p>
               Alternative text - include a link{" "}
-              <a href="http://africau.edu/images/default/sample.pdf">
+              <a href="https://drive.google.com/file/d/1W9XID4kdFJMn4QUoLWnyjSFifGiPU6Bz/view?usp=drive_link">
                 to the PDF!
               </a>
             </p>
-          </object>
+          </object> */}
+          <MyPdfViewer/>
         </div>
       </div>
     </>

@@ -18,7 +18,8 @@ const Home = () => {
   const phoneNumber = '4372553645';
   return (
     <div className="container home-page">
-      <div className="text-zone">
+      <div className="text-zone-home">
+      <div className="home-section-one">
         <h1>
           Hi, <br /> I'm
           JINAL
@@ -31,9 +32,12 @@ const Home = () => {
           I'm a frontend developer (for now) with a wealth of experience. I've played integral roles in both team collaborations and solo endeavors, demonstrating my ability to build websites from scratch, troubleshoot existing code issues, and actively engage in client communication, design, development, and deployment processes. Notably, I bring WordPress development skills to the table, adding an extra layer of expertise to my toolkit. Let's connect and bring your digital vision to life!
         </p>
         <h2>Frontend Developer / WordPress Developer / React Developer</h2>
+        </div>
+        <div className="home-section-bttn">
         <Link to={`tel:${phoneNumber}`} className="flat-button">
           Contact Me
         </Link>
+        </div>
       </div>
       <div className="stage-cube-cont">
         <div className="cubespinner">

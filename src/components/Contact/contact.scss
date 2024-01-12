@@ -49,6 +49,7 @@
   -moz-transform: rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   display: none;
+  font-size: 16px;
 }
 .flipcard.flipped .back {
   display: block;
@@ -64,7 +65,7 @@
   float: left;
   width: 25%;
   padding: 10px;
-  height: 300px; /* Should be removed. Only for demonstration */
+  height: 250px; /* Should be removed. Only for demonstration */
 }
 .column.flipcard {
   background-color: $primary-color;
@@ -76,7 +77,26 @@
   display: table;
   clear: both;
 }
+.project-button{
+    border: 1px solid #c8860c;
+    padding: 20px;
+    margin: 20px;
+    display: flex;
+    text-decoration: none;
+    background-color: #c8860c;
+}
+.project-button {
+    border: 1px solid #c8860c; 
+    padding: 20px;
+    display: flex;
+    text-decoration: none;
+    background-color: #c8860c;
+    width: 25%;
+    margin: 10px;
+    color: $secondary-color;
+    font-size: 23px;
 
+}
 //   responsive
 $mobile-width: 320px;
 $tablet-width: 768px;
@@ -92,7 +112,11 @@ $desktop-width: 1024px;
     float: left;
     width: 80%;
     padding: 10px;
-    height: 300px;
+    height: 250px;
+  }
+  .project-button {
+    width: 80%;
+    margin: auto;
   }
 }
 // }
@@ -108,7 +132,7 @@ $desktop-width: 1024px;
     width: 40%;
     padding: 10px;
     height: 200px;
-    margin-bottom: 80px;
+    // margin-bottom: 80px;
   }
   .text-zone .skills-icon .icon__wrap svg.icon__img {
     width: 8rem;

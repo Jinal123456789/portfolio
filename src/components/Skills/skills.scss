@@ -1,7 +1,5 @@
 @import '../../App.scss';
-.container{
-  overflow-x: auto;
-}
+
 .skill-page {
   // background-color: red;
   color: $primary-color;
@@ -84,6 +82,7 @@ $desktop-width: 1024px;
     right: 0;
     top: 0;
     margin: auto;
+    margin-top: 4rem;
   }
   // .column{
   //   height: 200px;

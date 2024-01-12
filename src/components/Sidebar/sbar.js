@@ -5,7 +5,7 @@ import Logo from "../../assets/images/jinal-logo.png";
 
 import {
   faHome,
-  faUser,
+  // faUser,
   faEnvelope,
   faEllipsisVertical,
   faTerminal,
