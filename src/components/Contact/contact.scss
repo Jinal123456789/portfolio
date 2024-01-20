@@ -80,8 +80,7 @@
 }
 .project-button{
     border: 1px solid #c8860c;
-    padding: 20px;
-    margin: 20px;
+    padding: 30px;
     display: flex;
     background-color: #c8860c;
     width: 25%;
@@ -90,8 +89,15 @@
     font-size: 23px;
     border-radius: 16px;
     text-decoration: none;
+    text-align: center;
 
 }
+
+a.project-button p {
+  text-align: center;
+  margin: auto;
+}
+
 //   responsive
 $mobile-width: 320px;
 $tablet-width: 768px;

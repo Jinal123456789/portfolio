@@ -125,7 +125,7 @@
     // svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu {
     //   display: none;
     // }
-    svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu {
+    svg.svg-inline--fa.fa-bars.ham-menu{
       display: none;
     }
   }
@@ -142,7 +142,8 @@ $desktop-width: 1024px;
 
 @media (min-width: #{$mobile-width}) and (max-width: #{$tablet-width - 1px}) {
   .menu-icon {
-    svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu {
+    // svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu 
+    svg.svg-inline--fa.fa-bars.ham-menu{
       display: block !important;
       font-size: 33px;
       color: $primary-color;
@@ -216,7 +217,8 @@ $desktop-width: 1024px;
 // @mixin tablet {
 @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
   .menu-icon {
-    svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu {
+    // svg.svg-inline--fa.fa-ellipsis-vertical.ham-menu 
+    svg.svg-inline--fa.fa-bars.ham-menu {
       display: block !important;
       font-size: 33px;
       color: $primary-color;

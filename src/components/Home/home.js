@@ -29,7 +29,7 @@ const Home = () => {
           <br />
           <br />
           <p>
-          I'm a frontend developer (for now) with a wealth of experience. I've played integral roles in both team collaborations and solo endeavors, demonstrating my ability to build websites from scratch, troubleshoot existing code issues, and actively engage in client communication, design, development, and deployment processes. Notably, I bring WordPress development skills to the table, adding an extra layer of expertise to my toolkit. Let's connect and bring your digital vision to life!
+          I'm a frontend developer (for now) with a wealth of experience. I've played integral roles in both team collaborations and solo endeavors, demonstrating my ability to build websites from scratch, troubleshoot existing code issues, and actively engage in client communication, design, development, and deployment processes. Let's connect and bring your digital vision to life!
         </p>
         <h2>Frontend Developer / WordPress Developer / React Developer</h2>
         </div>

@@ -7,7 +7,8 @@ import {
   faHome,
   // faUser,
   faEnvelope,
-  faEllipsisVertical,
+  // faEllipsisVertical,
+  faBars,
   faTerminal,
   faDiagramProject,
 } from "@fortawesome/free-solid-svg-icons";
@@ -34,8 +35,8 @@ const Sidebar = () => {
         </Link>
         <div className="menu-icon" onClick={handleShowNavbar}>
         {/* <Hamburger/> */}
-        <FontAwesomeIcon className="ham-menu" icon={faEllipsisVertical} color="#fff"/>
-        
+        {/* <FontAwesomeIcon className="ham-menu" icon={faEllipsisVertical} color="#fff"/> */}
+        <FontAwesomeIcon  icon={faBars}  className="ham-menu" color="#fff" />
         <div className={`nav-elements  ${showNavbar && "active"}`}>
         <nav>
           <NavLink eaxct="true" activeclassname="active" to="/">
