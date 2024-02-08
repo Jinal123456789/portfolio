@@ -12,7 +12,7 @@ import MyPdfViewer from "./pdf.js"
 
 const About = () => {
   const phoneNumber = '4372553645';
-  const email = 'jinalnpatel29@gmail.com'
+  const email = 'jinalnpatel2702@gmail.com'
   return (
     <>
       <div className="container about-page">
