@@ -39,7 +39,7 @@ const About = () => {
         </Link>
         <Link to={`mailto:${email}`} className="flat-contact">
         <label class="font-email">Email me : </label>
-        <label class="font-email-me">jinalnpatel29@gmail.com</label>
+        <label class="font-email-me">jinalnpatel2702@gmail.com</label>
         </Link>
         </div>
         </div>
